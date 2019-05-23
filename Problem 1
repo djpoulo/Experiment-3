@@ -1,0 +1,49 @@
+//This project will show the codes for Experiment 3 in Computer Programming
+
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+	int num[10], max, min, i;
+	float  average, total;
+	
+	max  = 0;
+	min = 0;
+	total = 0;
+	
+		cout << "Enter 10 Integers: ";
+		
+	for (i= 0; i < 10; i++)
+	{
+		cin >> num[i];
+		total += num[i]; 
+		average = total/10;
+	}
+	
+	min = num[0];
+	max = num[0];
+
+	for (int j = 0; j < 10; j++)
+	{
+		if(max<num[j])
+		{
+		 max = num[j];
+		}
+		else if (min>num[j])
+		{
+		min = num[j];
+		}
+	}
+	cout << "\n";
+	cout << max << "Highest Integer";
+	cout << "\n";
+	cout << min  << "Lowest Integer";
+	cout << "\n";
+	cout << total << "Total Value"; 
+	cout << "\n";
+	cout << average << "Average of the 10 Integers";
+	
+	return 0;
+}
